@@ -19,7 +19,7 @@
 FIL fsave;													/* file objects */
 UINT  bw;            					/* File R/W count */
 
-uint8_t rec_data[120];             //data read from sd
+uint8_t rec_data[122];             //data read from sd
 char bmp_name[20];
 int count_bmp=0;//计算bmp图片接收量
  uint8_t header1[54] =
@@ -54,9 +54,9 @@ int Ready_Save()
 /*
 *Save a file to .bmp
 */
-int Save_Pack(uint8_t *p,int aa)
+int Save_Pack(uint8_t *p,uint16_t aa)
 {
 		f_lseek(&fsave,(120*aa)+54);
-		f_write (&fsave, rec_data,120,&bw);	
+		f_write (&fsave, p,120,&bw);	
 		return bw;
 }
