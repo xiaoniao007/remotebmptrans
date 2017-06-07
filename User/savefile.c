@@ -25,7 +25,7 @@ int count_bmp=0;//计算bmp图片接收量
  uint8_t header1[54] =
 	{
 		0x42, 0x4d, 0x36, 0x84, 0x03, 0, 0, 0, 0, 0, 0x36, 0, 0, 0, 0x28,0, 0, 0, 0x40, 0x01, 0, 0, 0xF0, 0, 
-		0, 0, 0x01, 0, 24, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+		0, 0, 0x01, 0, 0x18, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 
 int Ready_Save()
 {
@@ -38,7 +38,7 @@ int Ready_Save()
 				f_write(&fsave, header1,54,&bw);
 				if(bw==54)
 				{
-						printf("Create a new file successfull %s",bmp_name);
+//						printf("Create a new file successfull %s",bmp_name);
 						count_bmp++;
 				}
 				else 

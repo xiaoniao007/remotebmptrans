@@ -163,14 +163,14 @@ void platform_init(void)
 	
 	if((res=f_mount(0,&fs))==FR_OK)
 	{
-		  printf("SDcard initalize successful!\n");
+//		  printf("SDcard initalize successful!\n");
 	}
 }
 
 void fs_open_send()
 {
   
-	uint16_t i,width;     //Í¼Æ¬µÄ¿í¶È£¬ÓÃÓÚ·¢ËÍÊı¾
+	uint16_t i,width;     //Í¼Æ¬µÄ¿í¶È£¬ÓÃÓÚ·¢ËÍÊı¾  
 	i=0;
 	width=320;
 
@@ -189,7 +189,7 @@ void fs_open_send()
 
 						if((res=f_read(&fnew,picture_data,btr,&br))==FR_OK)
 								{
-									send(SOCK_TCPS,picture_data,br);									
+									 send(SOCK_TCPS,picture_data,br);									
 								}				 
 
 				  	else printf("Read error!\r\n");

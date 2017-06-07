@@ -249,7 +249,7 @@ void USART3_IRQHandler(void)
 			
 		}
 //			
-//  USART_ClearITPendingBit(USART3,USART_IT_RXNE); //清除终端标志位
+  USART_ClearITPendingBit(USART3,USART_IT_RXNE); //清除终端标志位
 }
 
 
